@@ -17,3 +17,9 @@ VAULT_MOUNTPOINT                    # Vault app role mountpoint (default "approl
 VAULT_CLIENT_TIMEOUT                # Client timeout
 VAULT_SKIP_VERIFY                   # Do not check SSL
 ```
+
+## Usage
+
+```bash
+vault-dotenv --secret-path=/path/to/secret --env-file=production.env
+```
