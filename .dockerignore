@@ -1,0 +1,5 @@
+*
+.git*
+!go.mod
+!go.sum
+!main.go

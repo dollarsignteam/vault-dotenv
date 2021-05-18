@@ -28,6 +28,7 @@ func init() {
 		SecretPath: viper.GetString("secret-path"),
 	}
 	if flagConfig.SecretPath == "" {
+		pflag.PrintDefaults()
 		log.Fatal("please set --secret-path flag")
 	}
 	if os.Getenv("VAULT_ROLEID") == "" {
@@ -56,5 +57,5 @@ func main() {
 	if errWriteFile != nil {
 		log.Fatal(errWriteFile)
 	}
-	log.Printf("Write vault secret: %s to %s\n", flagConfig.SecretPath, flagConfig.EnvFile)
+	fmt.Printf("Write vault secret: %s to %s\n", flagConfig.SecretPath, flagConfig.EnvFile)
 }
